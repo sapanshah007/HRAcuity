@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automation Test Results</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f5f7; color: #333; }
+    .container { max-width: 1200px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    h1 { text-align: center; color: #0056b3; margin-bottom: 20px; }
+    h2 { color: #0056b3; margin-top: 20px; }
+    .filters { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
+    .filters select { padding: 8px; font-size: 16px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { padding: 10px; text-align: left; border: 1px solid #ddd; }
+    th { background-color: #e0f3ff; font-weight: bold; color: #0056b3; }
+    td:first-child, td:nth-child(2) { font-weight: bold; }
+    .link { color: #0056b3; text-decoration: none; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    .env-csi { background-color: #FFF5E1; }
+    .env-managER { background-color: #E1F3FF; }
+    .env-integrations { background-color: #E5FFE5; }
+    .env-speakfully { background-color: #FFE1F7; }
+    .env-analytics { background-color: #FFE5E5; }
+    .env-platform { background-color: #F0F0F0; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Automation Test Results</h1>
+    
+    <!-- Filters -->
+    <div class="filters">
+      <label for="env-filter">Filter by Environment:</label>
+      <select id="env-filter">
+        <option value="all">All</option>
+        <option value="integration">Integration Environment</option>
+        <option value="regression">Regression Environment</option>
+        <option value="sandbox-production">Sandbox and Production</option>
+      </select>
+
+      <label for="team-filter">Filter by Team:</label>
+      <select id="team-filter">
+        <option value="all">All</option>
+        <option value="CSI">CSI</option>
+        <option value="managER">managER</option>
+        <option value="Integrations">Integrations</option>
+        <option value="Speakfully">Speakfully</option>
+        <option value="Analytics">Analytics</option>
+        <option value="Platform">Platform</option>
+      </select>
+
+      <label for="testtype-filter">Filter by Test Type:</label>
+      <select id="testtype-filter">
+        <option value="all">All</option>
+        <option value="E2E">E2E</option>
+        <option value="API">API</option>
+        <option value="Globalization">Globalization</option>
+        <option value="All">All Tests</option>
+      </select>
+    </div>
+
+    <!-- Integration Environment Table -->
+    <h2>Integration Environment</h2>
+    <table>
+      <tr>
+        <th>Team</th>
+        <th>Test Type</th>
+        <th>Start Time</th>
+        <th>Duration</th>
+        <th>Status</th>
+        <th>Passed</th>
+        <th>Failed</th>
+        <th>Skipped</th>
+        <th>Details</th>
+      </tr>
+      <tr class="env-csi"><td>CSI</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-csi"><td>CSI</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-csi"><td>CSI</td><td>Globalization</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-managER"><td>managER</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-managER"><td>managER</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-integrations"><td>Integrations</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-integrations"><td>Integrations</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-speakfully"><td>Speakfully</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-speakfully"><td>Speakfully</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-analytics"><td>Analytics</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-analytics"><td>Analytics</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-platform"><td>Platform</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-platform"><td>Platform</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+    </table>
+
+    <!-- Regression Environment Table -->
+    <h2>Regression Environment</h2>
+    <table>
+      <tr>
+        <th>Team</th>
+        <th>Test Type</th>
+        <th>Start Time</th>
+        <th>Duration</th>
+        <th>Status</th>
+        <th>Passed</th>
+        <th>Failed</th>
+        <th>Skipped</th>
+        <th>Details</th>
+      </tr>
+      <!-- Fill rows with detailed data for Regression Environment as per screenshot -->
+      <tr class="env-csi"><td>CSI</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-csi"><td>CSI</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-csi"><td>CSI</td><td>Globalization</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-managER"><td>managER</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-managER"><td>managER</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-integrations"><td>Integrations</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-integrations"><td>Integrations</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-speakfully"><td>Speakfully</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-speakfully"><td>Speakfully</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-analytics"><td>Analytics</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-analytics"><td>Analytics</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-platform"><td>Platform</td><td>E2E</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>5</td><td>2</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-platform"><td>Platform</td><td>API</td><td>Oct 22, 2024 11:15</td><td>0h 30m</td><td>90%</td><td>30</td><td>2</td><td>1</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+    </table>
+
+    <!-- Sandbox and Production Status Report Table -->
+    <h2>Sandbox and Production Status Report</h2>
+    <table>
+      <tr>
+        <th>Team</th>
+        <th>Test Type</th>
+        <th>Scheduled Time</th>
+        <th>Duration</th>
+        <th>Pass Rate</th>
+        <th>Total Tests</th>
+        <th>Passed</th>
+        <th>Failed</th>
+        <th>Link</th>
+      </tr>
+      <tr class="env-csi"><td>CSI</td><td>All</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>45</td><td>5</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-managER"><td>managER</td><td>All</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>45</td><td>5</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-integrations"><td>Integrations</td><td>All</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>45</td><td>5</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-speakfully"><td>Speakfully</td><td>All</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>45</td><td>5</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-analytics"><td>Analytics</td><td>All</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>45</td><td>5</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+      <tr class="env-platform"><td>Platform</td><td>All</td><td>Oct 22, 2024 10:00</td><td>0h 30m</td><td>90%</td><td>50</td><td>45</td><td>5</td><td><a href="#" class="link">View Pipeline</a></td></tr>
+    </table>
+  </div>
+
+</body>
+</html>
